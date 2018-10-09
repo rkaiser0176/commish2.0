@@ -14,11 +14,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var comissionPayTextField: UITextField!
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        let basePay:Int = 500
+        super.viewDidLoad()
     }
 
     @IBAction func calculateOnTapped(_ sender: Any) {
     }
     
+    
 }
+    func getInput(){
+}
+
 
