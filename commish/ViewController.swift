@@ -11,23 +11,27 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var totalPayLabel: UILabel!
-    
+   
     @IBOutlet weak var commissionPayTextField: UITextField!
+     let basePay:Int = 500
     override func viewDidLoad() {
-        let basePay:Int = 500
+        
         super.viewDidLoad()
     }
 
     @IBAction func calculateOnTapped(_ sender: Any) {
     
-        getInput()
+        let comPay = getInput()
+        
+        let totalPay = comPay + Double(basePay)
     
 }
-    func getInput(){
-        if let data = commissionPayTextField.text, let commisionPay = Int(data){
-            print("everything is okay")
+    func getInput() -> Double
+    {
+        if let data = commissionPayTextField.text, let commisionPay = Double(data){
+            return commisionPay
         } else {
-            print("error occured")
+            return 0
         }
         
         
